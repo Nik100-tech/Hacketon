@@ -1,0 +1,36 @@
+{
+  "name": "contextbridge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm:server\" \"npm:client\"",
+    "server": "tsx --env-file=.env server/index.ts",
+    "client": "vite client",
+    "test:core": "tsx --env-file=.env core/try.ts",
+    "eval": "tsx --env-file=.env eval/run.ts",
+    "build": "vite build client"
+  },
+  "dependencies": {
+    "@google/genai": "latest",
+    "chatgpt-share-parser": "^0.1.1",
+    "cors": "^2.8.6",
+    "express": "latest",
+    "playwright": "^1.63.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "latest",
+    "@types/node": "latest",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "latest",
+    "concurrently": "latest",
+    "tsx": "latest",
+    "typescript": "latest",
+    "vite": "latest"
+  }
+}
